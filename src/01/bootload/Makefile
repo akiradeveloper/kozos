@@ -24,11 +24,11 @@ TARGET += kzload
 
 CFLAGS = -Wall -mh -nostdinc -nostdlib -fno-builtin
 # CFLAGS += -mint32
-CFLAGS += -I .
+CFLAGS += -I.
 CFLAGS += -Os
 CFLAGS += -DKZLOAD
 
-LFLAGS = -static -T ld.scr -L .
+LFLAGS = -static -T ld.scr -L.
 
 .SUFFIXES: .c .o
 .SUFFIXES: .s .o 
@@ -50,3 +50,4 @@ write:	$(TARGET).mot
 	$(H8WRITE) -3069 -f20 $(TARGET).mot $(H8WRITE_SERDEV)
 clean:	
 	rm -f $(OBJS) $(TARGET).elf $(TARGET).mot
+al:	clean all image

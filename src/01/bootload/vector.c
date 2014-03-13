@@ -1,6 +1,6 @@
 #include "defines.h"
-extern void start(void);
 
+extern void start(void);
 
 /*
  * start : reset vector 

@@ -22,6 +22,7 @@ struct h8_3069_sci {
 #define H8_3069F_SCI_SMR_CKS_PER16 (2 << 0)
 #define H8_3069F_SCI_SMR_CKS_PER64 (3 << 0)
 #define H8_3069F_SCI_SMR_MP (1 << 2)
+#define H8_3069F_SCI_SMR_STOP (1 << 3)
 #define H8_3069F_SCI_SMR_OE (1 << 4)
 #define H8_3069F_SCI_SMR_PE (1 << 5)
 #define H8_3069F_SCI_SMR_CHR (1 << 6)
@@ -59,7 +60,7 @@ int serial_init(int index)
 
 	sci->scr = 0; /* typo? */
 	sci->smr = 0;
-	sci->brr = 0;
+	sci->brr = 64;
 	sci->scr = H8_3069F_SCI_SCR_RE | H8_3069F_SCI_SCR_TE;
 	sci->ssr = 0;
 
