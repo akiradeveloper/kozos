@@ -1,4 +1,6 @@
-KOZOS YARUZE PROJECT
+# KOZOS YARUZE PROJECT
+
+![kozos chap 1](kozos-chap1.png "chap 1. hello from H8 over serial cable")
 
 * binutil-2.19.1
 * gcc 4.3.6 (gcc-3.4.6 couldn't compile) 
